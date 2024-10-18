@@ -58,7 +58,7 @@ legend {
 
 /* Card Styling */
 .card {
-  background-color: #6F4C3E; /* Card background */
+  background-color:  rgba(224, 188, 151, 0.7); /* Card background */
   padding: 1rem;
 }
 
@@ -107,7 +107,7 @@ legend {
 }
 
 h4 a, h4 a:hover {
-  color: #fff;
+  color: #000000;
 }
 
 h4 small {
