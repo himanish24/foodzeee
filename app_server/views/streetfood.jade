@@ -1,0 +1,161 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 Menu
+
+  .row
+    .col-12.col-lg-9
+      h2 
+      .row
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chicken Fired rice
+              .d-flex
+                img.img-fluid(src='https://tse4.mm.bing.net/th?id=OIP.EdtFdGsiPMUNRsxXORO6UwHaHa&pid=Api&P=0&h=180',  style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 60
+                  button.btn.btn-primary(onclick='addToCart("Chicken Fired rice", "Chicken Fired rice", 60)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chicken Noodles
+              .d-flex
+                img.img-fluid(src='https://theflavoursofkitchen.com/wp-content/uploads/2016/08/oriental-chicken-noodles.1024x1024-1.jpg',style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 60
+                  button.btn.btn-primary(onclick='addToCart("Chicken Noodles", "Chicken Noodles", 60)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chicken Manchuria
+              .d-flex
+                img.img-fluid(src='https://www.kannammacooks.com/wp-content/uploads/chicken-manchurian-recipe-dry-restaurant-style-1.jpg', alt='Chicken Manchuria', style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 90
+                  button.btn.btn-primary(onclick='addToCart("Chicken Manchuria", "Chicken Manchuria", 90)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 veg Fried Rice
+              .d-flex
+                img.img-fluid(src='https://tse3.mm.bing.net/th?id=OIP.9aoqWQnzKwDmXe-tC4wtzgHaHa&pid=Api&P=0&h=180',  style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 80
+                  button.btn.btn-primary(onclick='addToCart("veg Fried Rice", "veg Fried Rice", 80)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 veg Manchuria
+              .d-flex
+                img.img-fluid(src='https://i2.wp.com/vegecravings.com/wp-content/uploads/2017/03/veg-manchurian-dry-recipe-step-by-step-instructions-10.jpg?fit=2412%2C1944&quality=65&strip=all&ssl=1', style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 20
+                  button.btn.btn-primary(onclick='addToCart("veg Manchuria", "veg Manchuria", 20)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 paneer Fried rice
+              .d-flex
+                img.img-fluid(src='https://tse1.mm.bing.net/th?id=OIP.UZWz7tO0V5CN8jy_kly4TQHaHN&pid=Api&P=0&h=180', alt='paneer Fried rice', style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 20
+                  button.btn.btn-primary(onclick='addToCart("paneer Fried rice", "paneer Fried rice", 20)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Egg Fired rice
+              .d-flex
+                img.img-fluid(src='https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/egg-fried-rice-recipe.jpg', alt='Egg Fired rice', style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 80
+                  button.btn.btn-primary(onclick='addToCart("Egg Fired rice", "Egg Fired rice", 80)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chicken 65
+              .d-flex
+                img.img-fluid(src='https://thespicepaletteus.com/wp-content/uploads/2021/07/chicken-65-1.jpg', alt='Chicken 65', style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  
+                  p Cost: &#8377; 60
+                  button.btn.btn-primary(onclick='addToCart("Chicken 65", "Chicken 65", 60)') Add to Cart
+          .card.card-primary
+            .card-block
+              h3 veg Noodles
+              .d-flex
+                img.img-fluid(src='https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2016/1-Archana/Spicy_Vegetable_Noodles_Recipe-1.jpg', style='width: 100px; height: auto; margin-right: 15px;')
+                .streetfood-description
+                  p Cost: &#8377; 70
+                  button.btn.btn-primary(onclick='addToCart("veg Noodles", "veg Noodles", 70)') Add to Cart
+
+    .row
+      .col-12.col-lg-3
+        p If you've tried our FastFood, leave a review and let others know!
+  // Toast notification
+  .toast-container
+    .toast(id='toast', style='position: fixed; bottom: 20px; right: 20px; display: none;')
+      .toast-body 
+
+  // JavaScript for Add to Cart functionality
+  script.
+    function addToCart(itemId, itemName, itemPrice) {
+      const item = {
+        id: itemId,
+        name: itemName,
+        price: itemPrice,
+        quantity: 1 // Set the quantity you want to add
+      };
+
+      // Send a POST request to add the item to the cart
+      fetch('/cart/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to add item to cart');
+        } else {
+          showToast(itemName); // Show toast with item name
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+      function showToast(itemName) {
+        const toast = document.getElementById('toast');
+        toast.querySelector('.toast-body').textContent = `${itemName} added to cart!`; // Set toast message
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+      }
+    }

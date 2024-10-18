@@ -1,0 +1,158 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1  Menu
+
+  .row
+    .col-12.col-lg-9
+      h2 
+      .row
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chicken Dum Biryani
+              .d-flex
+                img.img-fluid(src='https://recipes.timesofindia.com/thumb/54308405.cms?imgsize=510571&width=800&height=800', alt='Chicken Dum Biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹150
+                  button.btn.btn-primary(onclick='addToCart("Chicken Dum Biryani", "Chicken Dum Biryani", 150)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Mutton Dum biryani
+              .d-flex
+                img.img-fluid(src='https://www.cubesnjuliennes.com/wp-content/uploads/2021/03/Best-Mutton-Biryani-Recipe.jpg', alt='Mutton Dum biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹160
+                  button.btn.btn-primary(onclick='addToCart("Mutton Dum biryani", "Mutton Dum biryani", 160)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Special Chicken Biryani
+              .d-flex
+                img.img-fluid(src='https://www.whiskaffair.com/wp-content/uploads/2020/07/Chicken-Biryani-2-3.jpg', alt='Special Chicken Biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹290
+                  button.btn.btn-primary(onclick='addToCart("Special Chicken Biryani", "Special Chicken Biryani", 290)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Special Mutton Biryani
+              .d-flex
+                img.img-fluid(src='https://spiceeats.com/wp-content/uploads/2020/07/Mutton-Biryani.jpg', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹300
+                  button.btn.btn-primary(onclick='addToCart("Special Mutton Biryani", "Special Mutton Biryani", 300)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Fry piece Chicken Biryani
+              .d-flex
+                img.img-fluid(src='https://i.ytimg.com/vi/W5cadEbGukk/maxresdefault.jpg', alt='Fry piece Chicken Biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹300
+                  button.btn.btn-primary(onclick='addToCart("Fry piece Chicken Biryani", "Fry piece Chicken Biryani", 300)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 chicken 65 Biryani
+              .d-flex
+                img.img-fluid(src='https://tse1.mm.bing.net/th?id=OIP.ibDgTNA9fK5xyii4NL6LaAHaE-&pid=Api&P=0&h=180', alt='chicken 65 Biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹150
+                  button.btn.btn-primary(onclick='addToCart("chicken 65 Biryani", "chicken 65 Biryani", 150)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 veg Biryani
+              .d-flex
+                img.img-fluid(src='https://cravinghomecooked.com/wp-content/uploads/2020/05/vegetable-biryani-1-23.jpg', alt='veg Biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹160
+                  button.btn.btn-primary(onclick='addToCart("veg Biryani", "veg Biryani", 160)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 paneer Biryani
+              .d-flex
+                img.img-fluid(src='https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Priya__Suresh/Paneer_Biryani_Recipe_1_1600.jpg', alt='paneer Biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹130
+                  button.btn.btn-primary(onclick='addToCart("paneer Biryani", "paneer Biryani", 130)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Afghani chicken Biryani
+              .d-flex
+                img.img-fluid(src='https://tse1.mm.bing.net/th?id=OIP.2cqUYLkAOmzl9VrwpP6ahQAAAA&pid=Api&P=0&h=180', alt=' Afghani chicken Biryani', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹170
+                  button.btn.btn-primary(onclick='addToCart("Afghani chicken Biryani", "Afghani chicken Biryani", 170)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 chicken kebaab
+              .d-flex
+                img.img-fluid(src='https://www.onceuponachef.com/images/2012/09/Chicken-Kabobs-scaled-1120x1381.jpg', alt='chicken kebaab', style='width: 100px; height: auto; margin-right: 15px;')
+                .sandwich-description
+                  p Price: ₹140
+                  button.btn.btn-primary(onclick='addToCart("chicken kebaab", "chicken kebaab", 140)') Add to Cart
+
+    .row
+      .col-12.col-lg-3
+        p If you've tried our biryani, leave a review and let others know!
+
+  // Toast notification
+  .toast-container
+    .toast(id='toast', style='position: fixed; bottom: 20px; right: 20px; display: none;')
+      .toast-body 
+
+  // JavaScript for Add to Cart functionality
+  script.
+    function addToCart(itemId, itemName, itemPrice) {
+      const item = {
+        id: itemId,
+        name: itemName,
+        price: itemPrice,
+        quantity: 1 // Set the quantity you want to add
+      };
+
+      // Send a POST request to add the item to the cart
+      fetch('/cart/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to add item to cart');
+        } else {
+          showToast(itemName); // Show toast with item name
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+      function showToast(itemName) {
+        const toast = document.getElementById('toast');
+        toast.querySelector('.toast-body').textContent = `${itemName} added to cart!`; // Set toast message
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+      }
+    }

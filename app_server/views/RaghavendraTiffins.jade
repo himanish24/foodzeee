@@ -1,0 +1,153 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 Menu
+
+  .row
+    .col-12.col-lg-9
+      h2 
+      .row
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Idly
+              .d-flex
+                img.img-fluid(src='https://tse3.mm.bing.net/th?id=OIP.acHMl7OKBxP2eZEgFZ7bJgHaFj&pid=Api&P=0&h=180', alt='Idly', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 60
+                  button.btn.btn-primary(onclick='addToCart("Idly", "Idly", 60)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 vada
+              .d-flex
+                img.img-fluid(src='https://www.funfoodfrolic.com/wp-content/uploads/2020/10/Medu-Vada-Thumbnail-1170x1170.jpg', alt='vada', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 60
+                  button.btn.btn-primary(onclick='addToCart("vada", "vada", 60)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Begum Bazar Dosa
+              .d-flex
+                img.img-fluid(src='https://i.pinimg.com/originals/99/40/72/9940727be218793f5de3450a6cc9cd14.jpg', alt='Begum Basar Dosa', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 90
+                  button.btn.btn-primary(onclick='addToCart("Begum Basar Dosa", "Begum Basar Dosa", 90)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 pesarattu
+              .d-flex
+                img.img-fluid(src='https://www.kannammacooks.com/wp-content/uploads/pesarattu.jpg', alt='pesarattu', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 80
+                  button.btn.btn-primary(onclick='addToCart("pesarattu", "pesarattu", 80)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Masala Tea
+              .d-flex
+                img.img-fluid(src='https://tse3.mm.bing.net/th?id=OIP.DD4t0x1cq3SAq4PZvWABlgHaHa&pid=Api&P=0&h=180https://tse3.mm.bing.net/th?id=OIP.DD4t0x1cq3SAq4PZvWABlgHaHa&pid=Api&P=0&h=180', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 20
+                  button.btn.btn-primary(onclick='addToCart("Masala Tea", "Masala Tea", 20)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 coffee
+              .d-flex
+                img.img-fluid(src='https://tse2.mm.bing.net/th?id=OIP.1CG_KxezHsatvJzJKn8vIQHaHa&pid=Api&P=0&h=180', alt='coffee', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 20
+                  button.btn.btn-primary(onclick='addToCart("coffee", "coffee", 20)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 paneer Dosa
+              .d-flex
+                img.img-fluid(src='https://tse2.mm.bing.net/th?id=OIP.wvi-xJMC3TnUiXKEYCg_zgHaFo&pid=Api&P=0&h=180', alt='paneer Dosa', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 80
+                  button.btn.btn-primary(onclick='addToCart("paneer Dosa", "paneer Dosa", 80)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 puri
+              .d-flex
+                img.img-fluid(src='https://tse2.mm.bing.net/th?id=OIP.gixs_1bZsxEMv99RilIJSQHaFj&pid=Api&P=0&h=180', alt='puri', style='width: 100px; height: auto; margin-right: 15px;')
+                .RaghavendraTiffins-description
+                  
+                  p Cost: &#8377; 60
+                  button.btn.btn-primary(onclick='addToCart("puri", "puri", 60)') Add to Cart
+
+    .row
+      .col-12.col-lg-3
+        p If you've tried our tiffins, leave a review and let others know!
+  // Toast notification
+  .toast-container
+    .toast(id='toast', style='position: fixed; bottom: 20px; right: 20px; display: none;')
+      .toast-body 
+
+  // JavaScript for Add to Cart functionality
+  script.
+    function addToCart(itemId, itemName, itemPrice) {
+      const item = {
+        id: itemId,
+        name: itemName,
+        price: itemPrice,
+        quantity: 1 // Set the quantity you want to add
+      };
+
+      // Send a POST request to add the item to the cart
+      fetch('/cart/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to add item to cart');
+        } else {
+          showToast(itemName); // Show toast with item name
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+      function showToast(itemName) {
+        const toast = document.getElementById('toast');
+        toast.querySelector('.toast-body').textContent = `${itemName} added to cart!`; // Set toast message
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+      }
+    }

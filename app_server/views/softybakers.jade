@@ -1,0 +1,162 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1  Menu
+
+  .row
+    .col-12.col-lg-9
+      h2 
+
+      .row
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 pineApple cake
+              .d-flex
+                img.img-fluid(src='https://bkmedia.bakingo.com/sq-pineapple-cake0022pifr-AA_0.jpg', alt='pineApple cake', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                
+                  p Cost: &#8377; 100
+                  button.btn.btn-primary(onclick='addToCart("pineApple cake", "pineApple cake", 100)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Veg puff
+              .d-flex
+                img.img-fluid(src='https://www.mrishtanna.com/wp-content/uploads/2017/11/veg-puff-recipe.jpg', alt='Veg puff', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 80
+                  button.btn.btn-primary(onclick='addToCart("Veg puff", "Veg puff", 80)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chicken puff
+              .d-flex
+                img.img-fluid(src='https://thedizzycook.com/wp-content/uploads/2022/12/chicken-puff-pastry.jpg', alt='Chicken puff', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 120
+                  button.btn.btn-primary(onclick='addToCart("Chicken puff", "Chicken puff", 120)') Add to Cart
+
+        
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chocolate lava
+              .d-flex
+                img.img-fluid(src='https://tse4.mm.bing.net/th?id=OIP.faDsfCb6J2UIlAUHf4gbZwHaHa&pid=Api&P=0&h=180', alt='Chocolate lava', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 150
+                  button.btn.btn-primary(onclick='addToCart("Chocolate lava", "Chocolate lava", 150)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 vanilla Hot Chocolate
+              .d-flex
+                img.img-fluid(src='https://tse1.mm.bing.net/th?id=OIP.GhbcAHFd9wFt3sfajMtFhwHaHa&pid=Api&P=0&h=180', alt='vanilla Hot Chocolate', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 130
+                  button.btn.btn-primary(onclick='addToCart("vanilla Hot Chocolate", "vanilla Hot Chocolate", 130)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Mixed Icecream
+              .d-flex
+                img.img-fluid(src='https://tse1.mm.bing.net/th?id=OIP.gbgqYKkN_rGJ4vHColpr3gHaF3&pid=Api&P=0&h=180', alt='Mixed Icecream', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 110
+                  button.btn.btn-primary(onclick='addToCart("Mixed Icecream", "Mixed Icecream", 110)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 paneer puff
+              .d-flex
+                img.img-fluid(src='https://tse4.mm.bing.net/th?id=OIP.jnmlDIEsGTxzSd4DIFAEHQHaHZ&pid=Api&P=0&h=180', alt='paneer puff', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 140
+                  button.btn.btn-primary(onclick='addToCart("paneer puff", "paneer puff", 140)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Egg puff
+              .d-flex
+                img.img-fluid(src=' http://2.bp.blogspot.com/-gKJheRmatOk/TfIiY0pHgLI/AAAAAAAABo8/UXBkIqkjY-s/s1600/egg+puffs.JPG', alt='Egg puff', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 160
+                  button.btn.btn-primary(onclick='addToCart("Egg puff", "Egg puff", 160)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chocolate Milkshake
+              .d-flex
+                img.img-fluid(src='https://tse4.mm.bing.net/th?id=OIP.tJQbmVwqLofjQrUtnCWzKQHaHa&pid=Api&P=0&h=180', alt='Chocolate Milkshake', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 200
+                  button.btn.btn-primary(onclick='addToCart("Chocolate Milkshake", "Chocolate Milkshake", 200)') Add to Cart
+
+        .col-12.col-md-6
+          .card.card-primary
+            .card-block
+              h3 Chicken burger
+              .d-flex
+                img.img-fluid(src='https://tse4.mm.bing.net/th?id=OIP.m93SV6ox1swkqRaBnEzbHgHaHa&pid=Api&P=0&h=180', alt='Chicken burger', style='width: 100px; height: auto; margin-right: 15px;')
+                .softybakers-description
+                  p Cost: &#8377; 180
+                  button.btn.btn-primary(onclick='addToCart("Chicken burger", "Chicken burger", 180)') Add to Cart
+    .row
+      .col-12.col-lg-3
+        p If you've tried our bakery items, leave a review and let others know!
+  // Toast notification
+  .toast-container
+    .toast(id='toast', style='position: fixed; bottom: 20px; right: 20px; display: none;')
+      .toast-body 
+
+  // JavaScript for Add to Cart functionality
+  script.
+    function addToCart(itemId, itemName, itemPrice) {
+      const item = {
+        id: itemId,
+        name: itemName,
+        price: itemPrice,
+        quantity: 1 // Set the quantity you want to add
+      };
+
+      // Send a POST request to add the item to the cart
+      fetch('/cart/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to add item to cart');
+        } else {
+          showToast(itemName); // Show toast with item name
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+      function showToast(itemName) {
+        const toast = document.getElementById('toast');
+        toast.querySelector('.toast-body').textContent = `${itemName} added to cart!`; // Set toast message
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+      }
+    }
